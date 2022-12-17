@@ -92,6 +92,9 @@ extension DeviceManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         let byteArray: [UInt8] = [ 0x00, 0x02, 0x01, 0x03]
         let data = Data(byteArray)
+        let sampleArray: [UInt8] = [0x01,0x00,0x01,0xF4,0x01,0xFF,0x9C,0x64,0x00,0x00,0x00,0x11,0x11,0x20,0x38]
+        let sampleData = Data(sampleArray)
+        
         guard let characteristics = service.characteristics else { return }
         
         for characteristic in characteristics {
@@ -100,6 +103,13 @@ extension DeviceManager: CBPeripheralDelegate {
             peripheral.writeValue(data, for: characteristic, type: .withoutResponse)
         }
         print("did Discover Characteristics for executed")
+        
+        for characteristic in characteristics {
+            peripheral.setNotifyValue(true, for: characteristic)
+            peripheral.writeValue(sampleData, for: characteristic, type: .withResponse)
+            peripheral.writeValue(sampleData, for: characteristic, type: .withoutResponse)
+        }
+        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {

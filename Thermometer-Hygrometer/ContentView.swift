@@ -10,12 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var manager: DeviceManager
     var body: some View {
-        List(manager.devices, id: \.self){ device in
-            VStack(alignment: .leading) {
-                Text(device.peripheral.name ?? "unnamed device")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text(device.peripheral.identifier.description)
+        NavigationView {
+            List(manager.devices, id: \.self){ device in
+                NavigationLink {
+                    DeviceDetailView(device: device)
+                } label: {
+                    Text(device.peripheral.name ?? "unnamed device")
+                        .fontWeight(.bold)
+                    }
             }
         }
     }
