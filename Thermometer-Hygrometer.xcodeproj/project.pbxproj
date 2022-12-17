@@ -14,6 +14,7 @@
 		A153F8C4294DD92F00C75433 /* Thermometer_HygrometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8C3294DD92F00C75433 /* Thermometer_HygrometerTests.swift */; };
 		A153F8CE294DD92F00C75433 /* Thermometer_HygrometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8CD294DD92F00C75433 /* Thermometer_HygrometerUITests.swift */; };
 		A153F8D0294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8CF294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift */; };
+		A153F8DD294DDC9700C75433 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DC294DDC9700C75433 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A153F8C9294DD92F00C75433 /* Thermometer-HygrometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thermometer-HygrometerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8CD294DD92F00C75433 /* Thermometer_HygrometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerUITests.swift; sourceTree = "<group>"; };
 		A153F8CF294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A153F8DC294DDC9700C75433 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A153F8DC294DDC9700C75433 /* Device.swift */,
 				A153F8B6294DD92E00C75433 /* Assets.xcassets */,
 				A153F8B8294DD92E00C75433 /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 			);
