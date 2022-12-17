@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var manager: DeviceManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(manager.devices, id: \.self){ device in
+            VStack(alignment: .leading) {
+                Text(device.peripheral.name ?? "unnamed device")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text(device.peripheral.identifier.description)
+            }
         }
-        .padding()
     }
 }
 
