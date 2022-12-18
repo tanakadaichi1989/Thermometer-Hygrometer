@@ -17,20 +17,15 @@ struct ContentView: View {
                 Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
             } else {
                 VStack {
+                    HStack {
+                        DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
+                        DeviceConnectButtonView(label: "DisConnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
+                    }
                     Text(manager.devices[0].peripheral.name ?? "unnamed device")
-                    Text(manager.recievedData.description)
-                    Button {
-                        manager.connect(peripheral: manager.devices[0].peripheral)
-                        manager.recievedData = []
-                    } label: {
-                        Text("Connect")
-                    }
-                    Button {
-                        manager.disConnect(peripheral: manager.devices[0].peripheral)
-                        manager.recievedData = []
-                    } label: {
-                        Text("Disconnect")
-                    }
+                        .font(.subheadline)
+                        .fontWeight(.thin)
+                        .padding()
+
                 }
             }
         }
