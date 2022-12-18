@@ -8,14 +8,58 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var manager: DeviceManager
+    
     var body: some View {
+
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if manager.devices.count == 0 {
+                Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
+            } else {
+                VStack {
+                     HStack {
+                        HStack {
+                            Image(systemName: "thermometer.medium")
+                                .font(.largeTitle)
+                            if manager.recievedData.count == 0 {
+                                Text("-")
+                                    .font(.largeTitle)
+                            } else {
+                                Text("\(self.convert(manager.recievedData[4])) ℃")
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .padding()
+                        HStack {
+                            Image(systemName: "humidity.fill")
+                                .font(.largeTitle)
+                            if manager.recievedData.count == 0 {
+                                Text("-")
+                                    .font(.largeTitle)
+                            } else {
+                                Text("\(manager.recievedData[6].description)%")
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .padding()
+                    }
+                    .padding()
+                    HStack {
+                        DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
+                        DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
+                    }
+                    Text(manager.devices[0].peripheral.name ?? "unnamed device")
+                        .font(.subheadline)
+                        .fontWeight(.thin)
+                        .padding()
+                }
+            }
         }
-        .padding()
+    }
+    
+    private func convert(_ data: Int) -> String {
+        var doubleData = Double(data) / 10
+        return String(format: "%.1f", doubleData)
     }
 }
 

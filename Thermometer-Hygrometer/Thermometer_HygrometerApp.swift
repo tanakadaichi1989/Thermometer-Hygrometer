@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import CoreBluetooth
 
 @main
 struct Thermometer_HygrometerApp: App {
+    @StateObject var manager: DeviceManager = DeviceManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(manager)
         }
     }
 }

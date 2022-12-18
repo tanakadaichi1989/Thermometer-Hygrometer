@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */; };
 		A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */; };
 		A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B4294DD92D00C75433 /* ContentView.swift */; };
 		A153F8B7294DD92E00C75433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A153F8B6294DD92E00C75433 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		A153F8C4294DD92F00C75433 /* Thermometer_HygrometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8C3294DD92F00C75433 /* Thermometer_HygrometerTests.swift */; };
 		A153F8CE294DD92F00C75433 /* Thermometer_HygrometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8CD294DD92F00C75433 /* Thermometer_HygrometerUITests.swift */; };
 		A153F8D0294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8CF294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift */; };
+		A153F8DD294DDC9700C75433 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DC294DDC9700C75433 /* Device.swift */; };
+		A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DE294DDDE700C75433 /* MESHConstant.swift */; };
+		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConnectButtonView.swift; sourceTree = "<group>"; };
 		A153F8AF294DD92D00C75433 /* Thermometer-Hygrometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermometer-Hygrometer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerApp.swift; sourceTree = "<group>"; };
 		A153F8B4294DD92D00C75433 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		A153F8C9294DD92F00C75433 /* Thermometer-HygrometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thermometer-HygrometerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8CD294DD92F00C75433 /* Thermometer_HygrometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerUITests.swift; sourceTree = "<group>"; };
 		A153F8CF294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A153F8DC294DDC9700C75433 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		A153F8DE294DDDE700C75433 /* MESHConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESHConstant.swift; sourceTree = "<group>"; };
+		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
+				A153F8DC294DDC9700C75433 /* Device.swift */,
+				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
+				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
 				A153F8B6294DD92E00C75433 /* Assets.xcassets */,
 				A153F8B8294DD92E00C75433 /* Preview Content */,
 			);
@@ -257,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
+				A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */,
+				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
+				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +436,7 @@
 				DEVELOPMENT_TEAM = YUH8WT596Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +466,7 @@
 				DEVELOPMENT_TEAM = YUH8WT596Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
