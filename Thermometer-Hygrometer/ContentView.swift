@@ -46,7 +46,7 @@ struct ContentView: View {
                     .padding()
                     HStack {
                         DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
-                        DeviceConnectButtonView(label: "DisConnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
+                        DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
                     }
                     Text(manager.devices[0].peripheral.name ?? "unnamed device")
                         .font(.subheadline)
