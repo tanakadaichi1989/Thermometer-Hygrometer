@@ -17,7 +17,33 @@ struct ContentView: View {
                 Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
             } else {
                 VStack {
-                    
+                     HStack {
+                        HStack {
+                            Image(systemName: "thermometer.medium")
+                                .font(.largeTitle)
+                            if manager.recievedData.count == 0 {
+                                Text("-")
+                                    .font(.largeTitle)
+                            } else {
+                                Text("\(self.convert(manager.recievedData[4])) ℃")
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .padding()
+                        HStack {
+                            Image(systemName: "humidity.fill")
+                                .font(.largeTitle)
+                            if manager.recievedData.count == 0 {
+                                Text("-")
+                                    .font(.largeTitle)
+                            } else {
+                                Text("\(manager.recievedData[6].description)%")
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .padding()
+                    }
+                    .padding()
                     HStack {
                         DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
                         DeviceConnectButtonView(label: "DisConnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
@@ -26,10 +52,14 @@ struct ContentView: View {
                         .font(.subheadline)
                         .fontWeight(.thin)
                         .padding()
-
                 }
             }
         }
+    }
+    
+    private func convert(_ data: Int) -> String {
+        var doubleData = Double(data) / 10
+        return String(format: "%.1f", doubleData)
     }
 }
 
