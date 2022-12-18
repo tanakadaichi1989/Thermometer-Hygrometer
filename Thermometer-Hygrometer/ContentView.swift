@@ -11,13 +11,16 @@ struct ContentView: View {
     @EnvironmentObject var manager: DeviceManager
     
     var body: some View {
-
+        
         VStack {
             if manager.devices.count == 0 {
                 Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
             } else {
                 VStack {
-                     HStack {
+                    Text(Date().description)
+                        .font(.subheadline)
+                        .fontWeight(.thin)
+                    HStack {
                         HStack {
                             Image(systemName: "thermometer.medium")
                                 .font(.largeTitle)
@@ -37,7 +40,7 @@ struct ContentView: View {
                                 Text("-")
                                     .font(.largeTitle)
                             } else {
-                                Text("\(manager.recievedData[6].description)%")
+                                Text("\(manager.recievedData[6].description) %")
                                     .font(.largeTitle)
                             }
                         }
@@ -51,7 +54,11 @@ struct ContentView: View {
                     Text(manager.devices[0].peripheral.name ?? "unnamed device")
                         .font(.subheadline)
                         .fontWeight(.thin)
-                        .padding()
+                    if manager.batteryLevelData.count > 0 {
+                        Text("\(manager.batteryLevelData[2] * 10) %")
+                            .font(.subheadline)
+                            .fontWeight(.thin)
+                    }
                 }
             }
         }
