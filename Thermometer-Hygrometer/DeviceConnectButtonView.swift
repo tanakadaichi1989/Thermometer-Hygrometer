@@ -22,10 +22,9 @@ struct DeviceConnectButtonView: View {
             }
         } label: {
             Text(label)
-                .font(.subheadline)
-                .bold()
-                .padding()
-                .frame(width: 150, height: 150)
+                .font(.caption)
+
+                .frame(width: 100, height: 100)
                 .foregroundColor(.primary)
                 .overlay(
                     Circle()
