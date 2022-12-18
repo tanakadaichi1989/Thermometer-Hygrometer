@@ -33,7 +33,7 @@ class DeviceManager: NSObject, ObservableObject {
         centralManager.connect(peripheral,options: nil)
     }
     
-    func disconnect(peripheral: CBPeripheral){
+    func disConnect(peripheral: CBPeripheral){
         centralManager.cancelPeripheralConnection(peripheral)
     }
     
@@ -52,13 +52,14 @@ extension DeviceManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        guard let name = peripheral.name else { return }
+        guard name.hasPrefix(MESH.TH.description) else  { return }
         let device = Device(peripheral: peripheral, rssi: RSSI)
         if let index = devices.firstIndex(where: { $0.peripheral.identifier == device.peripheral.identifier }) {
             devices[index] = device
         } else {
             devices.append(device)
         }
-        devices.map { device in self.centralManager.connect(device.peripheral, options: nil)}
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -77,6 +78,7 @@ extension DeviceManager: CBCentralManagerDelegate {
         print("did update Value for executed")
         print(characteristic.description)
         guard let data = characteristic.value else { return }
+        guard analyze(data: data).count == 9 else { return }
         recievedData = analyze(data: data)
     }
 }

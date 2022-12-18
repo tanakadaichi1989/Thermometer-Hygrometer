@@ -17,7 +17,6 @@
 		A153F8DD294DDC9700C75433 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DC294DDC9700C75433 /* Device.swift */; };
 		A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DE294DDDE700C75433 /* MESHConstant.swift */; };
 		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
-		A153F8E3294DEC9700C75433 /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E2294DEC9700C75433 /* DeviceDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		A153F8DC294DDC9700C75433 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		A153F8DE294DDDE700C75433 /* MESHConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESHConstant.swift; sourceTree = "<group>"; };
 		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
-		A153F8E2294DEC9700C75433 /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
-				A153F8E2294DEC9700C75433 /* DeviceDetailView.swift */,
 				A153F8DC294DDC9700C75433 /* Device.swift */,
 				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
 				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
@@ -272,7 +269,6 @@
 				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
 				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
-				A153F8E3294DEC9700C75433 /* DeviceDetailView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 			);

@@ -9,15 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var manager: DeviceManager
+    
     var body: some View {
-        NavigationView {
-            List(manager.devices, id: \.self){ device in
-                NavigationLink {
-                    DeviceDetailView(device: device)
-                } label: {
-                    Text(device.peripheral.name ?? "unnamed device")
-                        .fontWeight(.bold)
+
+        VStack {
+            if manager.devices.count == 0 {
+                Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
+            } else {
+                VStack {
+                    Text(manager.devices[0].peripheral.name ?? "unnamed device")
+                    Text(manager.recievedData.description)
+                    Button {
+                        manager.connect(peripheral: manager.devices[0].peripheral)
+                        manager.recievedData = []
+                    } label: {
+                        Text("Connect")
                     }
+                    Button {
+                        manager.disConnect(peripheral: manager.devices[0].peripheral)
+                        manager.recievedData = []
+                    } label: {
+                        Text("Disconnect")
+                    }
+                }
             }
         }
     }
