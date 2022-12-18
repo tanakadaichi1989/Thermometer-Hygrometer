@@ -22,8 +22,18 @@ struct DeviceConnectButtonView: View {
             }
         } label: {
             Text(label)
+                .font(.subheadline)
+                .bold()
+                .padding()
+                .frame(width: 150, height: 150)
+                .foregroundColor(.primary)
+                .overlay(
+                    Circle()
+                        .stroke(Color.primary, lineWidth: 1)
+                )
         }
         .padding()
+
     }
     
     enum ConnectType {
