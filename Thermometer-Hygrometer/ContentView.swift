@@ -15,33 +15,40 @@ struct ContentView: View {
         VStack {
             if manager.devices.count == 0 {
                 Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
+                    .padding()
             } else {
                 VStack {
-                    Text(Date().description)
-                        .font(.subheadline)
-                        .fontWeight(.thin)
-                    HStack {
+                    Text(self.format(Date()))
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    VStack {
                         HStack {
                             Image(systemName: "thermometer.medium")
                                 .font(.largeTitle)
+                                .fontWeight(.bold)
                             if manager.recievedData.count == 0 {
                                 Text("-")
                                     .font(.largeTitle)
+                                    .fontWeight(.bold)
                             } else {
-                                Text("\(self.convert(manager.recievedData[4])) ℃")
+                                Text("\(self.convert(manager.recievedData[4],manager.recievedData[5])) ℃")
                                     .font(.largeTitle)
+                                    .fontWeight(.bold)
                             }
                         }
                         .padding()
                         HStack {
                             Image(systemName: "humidity.fill")
                                 .font(.largeTitle)
+                                .fontWeight(.bold)
                             if manager.recievedData.count == 0 {
                                 Text("-")
                                     .font(.largeTitle)
+                                    .fontWeight(.bold)
                             } else {
                                 Text("\(manager.recievedData[6].description) %")
                                     .font(.largeTitle)
+                                    .fontWeight(.bold)
                             }
                         }
                         .padding()
@@ -63,10 +70,20 @@ struct ContentView: View {
             }
         }
     }
+}
+
+extension ContentView {
+    private func convert(_ data1: Int, _ data2: Int) -> String {
+        var doubleData1 = Double(data1)
+        var doubleData2 = Double(data2 * 256)
+        var result = (data1 == 0 && data2 == 0) ? 0.0 : (doubleData1 + doubleData2)/10
+        return String(format: "%.1f", result)
+    }
     
-    private func convert(_ data: Int) -> String {
-        var doubleData = Double(data) / 10
-        return String(format: "%.1f", doubleData)
+    private func format(_ date: Date) -> String {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        return df.string(from: date)
     }
 }
 
