@@ -76,7 +76,7 @@ extension ContentView {
     private func convert(_ data1: Int, _ data2: Int) -> String {
         var doubleData1 = Double(data1)
         var doubleData2 = Double(data2 * 256)
-        var result = (data1 == 0 && data2 == 0) ? 0.0 : (doubleData1 + doubleData2)/10
+        var result = (doubleData1 == 0.0 && doubleData2 == 0) ? 0.0 : (doubleData1 + doubleData2)/10
         return String(format: "%.1f", result)
     }
     
