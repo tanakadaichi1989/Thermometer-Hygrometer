@@ -1,3 +1,3 @@
 # Thermometer-Hygrometer
-App Image
+## App Image
 https://www.youtube.com/watch?v=IO9onsm9LBY
