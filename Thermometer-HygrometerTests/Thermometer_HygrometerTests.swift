@@ -19,11 +19,13 @@ final class Thermometer_HygrometerTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        /*
+        var view = ContentView()
+        XCTAssertEqual(view.convert(255, 0),"25.5")
+        XCTAssertEqual(view.convert(0, 1),"25.6")
+        XCTAssertEqual(view.convert(1, 1),"25.7")
+        XCTAssertEqual(view.convert(0, 0),"0.0")
+        */
     }
 
     func testPerformanceExample() throws {
