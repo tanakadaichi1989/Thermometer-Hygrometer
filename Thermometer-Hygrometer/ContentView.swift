@@ -61,10 +61,9 @@ struct ContentView: View {
                     Text(manager.devices[0].peripheral.name ?? "unnamed device")
                         .font(.subheadline)
                         .fontWeight(.thin)
+                        .padding(1)
                     if manager.batteryLevelData.count > 0 {
-                        Text("\(manager.batteryLevelData[2] * 10) %")
-                            .font(.subheadline)
-                            .fontWeight(.thin)
+                        DeviceBatteryView(batteryLevel: manager.batteryLevelData[2])
                     }
                 }
             }
