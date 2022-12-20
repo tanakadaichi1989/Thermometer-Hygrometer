@@ -21,36 +21,13 @@ struct ContentView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                     VStack {
-                        HStack {
-                            Image(systemName: "thermometer.medium")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            if manager.recievedData.count == 0 {
-                                Text("-")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                            } else {
-                                Text("\(self.convert(manager.recievedData[4],manager.recievedData[5])) ℃")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                            }
+                        if manager.recievedData.count != 0 {
+                            MeasurementDataView(data: self.convert( manager.recievedData[4],manager.recievedData[5]), type: .thermometer)
+                            MeasurementDataView(data: manager.recievedData[6].description, type: .hygrometer)
+                        } else {
+                            MeasurementDataView(data: "-", type: .thermometer)
+                            MeasurementDataView(data: "-", type: .hygrometer)
                         }
-                        .padding()
-                        HStack {
-                            Image(systemName: "humidity.fill")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            if manager.recievedData.count == 0 {
-                                Text("-")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                            } else {
-                                Text("\(manager.recievedData[6].description) %")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                            }
-                        }
-                        .padding()
                     }
                     .padding()
                     HStack {
