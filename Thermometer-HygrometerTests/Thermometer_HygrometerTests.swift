@@ -20,10 +20,17 @@ final class Thermometer_HygrometerTests: XCTestCase {
 
     func testExample() throws {
         var view = ContentView()
+        XCTAssertEqual(view.convert(245, 1),"-")
+        XCTAssertEqual(view.convert(244, 1),"50.0")
+        XCTAssertEqual(view.convert(243, 1),"49.9")
         XCTAssertEqual(view.convert(255, 0),"25.5")
         XCTAssertEqual(view.convert(0, 1),"25.6")
         XCTAssertEqual(view.convert(1, 1),"25.7")
+        XCTAssertEqual(view.convert(1, 0),"0.1")
         XCTAssertEqual(view.convert(0, 0),"0.0")
+        XCTAssertEqual(view.convert(255, 255),"-0.1")
+        XCTAssertEqual(view.convert(156, 255),"-10.0")
+        XCTAssertEqual(view.convert(155, 255),"-")
     }
 
     func testPerformanceExample() throws {
