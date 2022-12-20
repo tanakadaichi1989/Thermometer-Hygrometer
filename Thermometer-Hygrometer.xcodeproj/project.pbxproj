@@ -18,6 +18,7 @@
 		A153F8DD294DDC9700C75433 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DC294DDC9700C75433 /* Device.swift */; };
 		A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8DE294DDDE700C75433 /* MESHConstant.swift */; };
 		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
+		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E114FA29509554008E9965 /* DeviceBatteryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		A153F8DC294DDC9700C75433 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		A153F8DE294DDDE700C75433 /* MESHConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESHConstant.swift; sourceTree = "<group>"; };
 		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1E114FA29509554008E9965 /* DeviceBatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBatteryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A1DF95202951E1710023C05F /* UnconnectView.swift */,
 				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
 				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
 				A153F8DC294DDC9700C75433 /* Device.swift */,
@@ -278,6 +281,7 @@
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
 				A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
+				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
