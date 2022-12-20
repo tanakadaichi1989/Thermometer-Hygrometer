@@ -14,8 +14,7 @@ struct ContentView: View {
         
         VStack {
             if manager.devices.count == 0 {
-                Text("センサの電源を入れ、温度計・湿度計デバイスのボタンをタップすると、アプリと接続できます")
-                    .padding()
+                UnconnectView()
             } else {
                 VStack {
                     Text(self.format(Date()))
