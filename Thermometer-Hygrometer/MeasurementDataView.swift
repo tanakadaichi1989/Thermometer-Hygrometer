@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MeasurementDataView: View {
-    var data: String
+    var data: Double?
     var type: MeasurementDataType
     
     var body: some View {
@@ -16,7 +16,7 @@ struct MeasurementDataView: View {
             Image(systemName: self.getSystemName(type: type))
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            Text("\(self.data) \(self.getUnit(type: type))")
+            Text("\(self.data?.description ?? "-") \(self.getUnit(type: type))")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }

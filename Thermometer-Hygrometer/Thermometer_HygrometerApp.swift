@@ -11,10 +11,13 @@ import CoreBluetooth
 @main
 struct Thermometer_HygrometerApp: App {
     @StateObject var manager: DeviceManager = DeviceManager()
+    let recordManager: RecordManager = RecordManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(manager)
+                .environment(\.managedObjectContext, recordManager.container.viewContext)
         }
     }
 }
