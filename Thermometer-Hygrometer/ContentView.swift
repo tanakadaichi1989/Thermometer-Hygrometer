@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var manager: DeviceManager
+    @Environment(\.managedObjectContext) var viewContext
+    @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
     
     var body: some View {
-        
         VStack {
             if manager.devices.count == 0 {
                 UnconnectView()
@@ -22,11 +23,11 @@ struct ContentView: View {
                         .fontWeight(.bold)
                     VStack {
                         if manager.recievedData.count != 0 {
-                            MeasurementDataView(data: self.convert( manager.recievedData[4],manager.recievedData[5]), type: .thermometer)
-                            MeasurementDataView(data: manager.recievedData[6].description, type: .hygrometer)
+                            MeasurementDataView(data: self.convert(manager.recievedData[4],manager.recievedData[5]), type: .thermometer)
+                            MeasurementDataView(data: Double(manager.recievedData[6]), type: .hygrometer)
                         } else {
-                            MeasurementDataView(data: "-", type: .thermometer)
-                            MeasurementDataView(data: "-", type: .hygrometer)
+                            MeasurementDataView(data: nil, type: .thermometer)
+                            MeasurementDataView(data: nil, type: .hygrometer)
                         }
                     }
                     .padding()
@@ -48,18 +49,11 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    private func convert(_ data1: Int, _ data2: Int) -> String {
-        var doubleData1 = Double(data1)
-        var doubleData2 = Double(data2 * 256)
-        guard let result = calculate(doubleData1, doubleData2) else { return "-" }
-        return String(format: "%.1f", result)
-    }
-    
-    private func calculate(_ data1: Double, _ data2: Double) -> Double? {
+    private func convert(_ data1: Int, _ data2: Int) -> Double? {
         switch data1 + data2 {
-            case 0.0: return 0.0
-            case 0.0...500.0: return (data1 + data2) / 10
-            case 65436.0...65535.0: return (data1 + data2 - 65536.0) / 10
+            case 0: return 0.0
+            case 0...500: return (Double(data1) + Double(data2)) / 10
+            case 65436...65535: return (Double(data1) + Double(data2) - 65536.0) / 10
             default: return nil
         }
     }
