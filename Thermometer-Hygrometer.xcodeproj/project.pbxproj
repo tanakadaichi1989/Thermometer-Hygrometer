@@ -115,16 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
-				A153F8B4294DD92D00C75433 /* ContentView.swift */,
-				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
-				A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */,
-				A1DF95202951E1710023C05F /* UnconnectView.swift */,
-				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
-				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
-				A153F8DC294DDC9700C75433 /* Device.swift */,
-				A18A8B852954B81200CFEBBF /* RecordManager.swift */,
-				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
-				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
+				A18A8B8E2955704A00CFEBBF /* Model */,
+				A18A8B8D2955702400CFEBBF /* Helper */,
+				A18A8B8C29556FE300CFEBBF /* View */,
 				A153F8B6294DD92E00C75433 /* Assets.xcassets */,
 				A153F8B8294DD92E00C75433 /* Preview Content */,
 			);
@@ -155,6 +148,37 @@
 				A153F8CF294DD92F00C75433 /* Thermometer_HygrometerUITestsLaunchTests.swift */,
 			);
 			path = "Thermometer-HygrometerUITests";
+			sourceTree = "<group>";
+		};
+		A18A8B8C29556FE300CFEBBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A1DF95202951E1710023C05F /* UnconnectView.swift */,
+				A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */,
+				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
+				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A18A8B8D2955702400CFEBBF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
+				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A18A8B8E2955704A00CFEBBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A153F8DC294DDC9700C75433 /* Device.swift */,
+				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
+				A18A8B852954B81200CFEBBF /* RecordManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
