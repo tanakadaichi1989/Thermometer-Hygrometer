@@ -20,6 +20,7 @@
 		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
 		A18A8B862954B81200CFEBBF /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B852954B81200CFEBBF /* RecordManager.swift */; };
 		A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */; };
+		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
 		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */; };
 		A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E114FA29509554008E9965 /* DeviceBatteryView.swift */; };
@@ -59,6 +60,7 @@
 		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		A18A8B852954B81200CFEBBF /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
 		A18A8B882954B91100CFEBBF /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
+		A18A8B8A2954C85B00CFEBBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataView.swift; sourceTree = "<group>"; };
 		A1E114FA29509554008E9965 /* DeviceBatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBatteryView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */,
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
 				A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */,
 				A1DF95202951E1710023C05F /* UnconnectView.swift */,
 				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
@@ -291,6 +294,7 @@
 				A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
+				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 				A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */,
 				A18A8B862954B81200CFEBBF /* RecordManager.swift in Sources */,

@@ -10,6 +10,7 @@ import CoreBluetooth
 
 struct DeviceConnectButtonView: View {
     @EnvironmentObject var manager: DeviceManager
+    @Environment(\.managedObjectContext) var viewContext
     var label: String
     var peripheral: CBPeripheral
     var type: ConnectType
