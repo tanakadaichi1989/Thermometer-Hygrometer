@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreBluetooth
+import SwiftUI
 
 class DeviceManager: NSObject, ObservableObject {
     private let centralManager: CBCentralManager
@@ -42,6 +43,10 @@ class DeviceManager: NSObject, ObservableObject {
         var result:[Int] = []
         data.map { i in result.append(Int(i)) }
         return result
+    }
+    
+    func hasDevice() -> Bool {
+        self.devices.count != 0
     }
 }
 
