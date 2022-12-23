@@ -19,20 +19,38 @@ final class Thermometer_HygrometerTests: XCTestCase {
     }
 
     func testExample() throws {
-        /*
-        var view = ContentView()
-        XCTAssertEqual(view.convert(245, 1),"-")
-        XCTAssertEqual(view.convert(244, 1),"50.0")
-        XCTAssertEqual(view.convert(243, 1),"49.9")
-        XCTAssertEqual(view.convert(255, 0),"25.5")
-        XCTAssertEqual(view.convert(0, 1),"25.6")
-        XCTAssertEqual(view.convert(1, 1),"25.7")
-        XCTAssertEqual(view.convert(1, 0),"0.1")
-        XCTAssertEqual(view.convert(0, 0),"0.0")
-        XCTAssertEqual(view.convert(255, 255),"-0.1")
-        XCTAssertEqual(view.convert(156, 255),"-10.0")
-        XCTAssertEqual(view.convert(155, 255),"-")
-        */
+        let test1 = Double.convert(245, 1)
+        XCTAssertNil(test1)
+        
+        let test2 = Double.convert(244, 1)
+        XCTAssertEqual(test2,50.0)
+        
+        let test3 = Double.convert(243, 1)
+        XCTAssertEqual(test3,49.9)
+        
+        let test4 = Double.convert(255, 0)
+        XCTAssertEqual(test4,25.5)
+        
+        let test5 = Double.convert(0,1)
+        XCTAssertEqual(test5,25.6)
+        
+        let test6 = Double.convert(1, 1)
+        XCTAssertEqual(test6,25.7)
+                
+        let test7 = Double.convert(1, 0)
+        XCTAssertEqual(test7,0.1)
+        
+        let test8 = Double.convert(0, 0)
+        XCTAssertEqual(test8,0.0)
+        
+        let test9 = Double.convert(255,255)
+        XCTAssertEqual(test9, -0.1)
+
+        let test10 = Double.convert(156, 255)
+        XCTAssertEqual(test10,-10.0)
+                    
+        let test11 = Double.convert(155, 255)
+        XCTAssertNil(test11)
     }
 
     func testPerformanceExample() throws {

@@ -18,12 +18,12 @@ struct ContentView: View {
                 UnconnectView()
             } else {
                 VStack {
-                    Text(self.format(Date()))
+                    Text(String.format(Date()))
                         .font(.title3)
                         .fontWeight(.bold)
                     VStack {
                         if manager.recievedData.count != 0 {
-                            MeasurementDataView(data: self.convert(manager.recievedData[4],manager.recievedData[5]), type: .thermometer)
+                            MeasurementDataView(data: Double.convert(manager.recievedData[4],manager.recievedData[5]), type: .thermometer)
                             MeasurementDataView(data: Double(manager.recievedData[6]), type: .hygrometer)
                         } else {
                             MeasurementDataView(data: nil, type: .thermometer)
@@ -49,24 +49,16 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    private func convert(_ data1: Int, _ data2: Int) -> Double? {
-        switch data1 + data2 {
-            case 0: return 0.0
-            case 0...500: return (Double(data1) + Double(data2)) / 10
-            case 65436...65535: return (Double(data1) + Double(data2) - 65536.0) / 10
-            default: return nil
-        }
+    /*
+    private func save(){
+        let record = Record(context: viewContext)
+        guard let temperatureCelsius = Double.convert(manager.recievedData[4],manager.recievedData[5]) else { return }
+        record.id = UUID()
+        record.date = Date()
+        record.deviceName = manager.devices[0].peripheral.name ?? "unnamed device"
+        record.temperatureCelsius = temperatureCelsius
+        record.humidityPercent = Double(manager.recievedData[6])
+        record.batteryLevel = Double(manager.batteryLevelData[2] * 10)
     }
-    
-    private func format(_ date: Date) -> String {
-        let df = DateFormatter()
-        df.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        return df.string(from: date)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+     */
 }

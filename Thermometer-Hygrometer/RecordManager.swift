@@ -17,4 +17,8 @@ struct RecordManager {
             }
         }
     }
+    
+    func save(viewContext: NSManagedObjectContext) throws {
+        try viewContext.save()
+    }
 }
