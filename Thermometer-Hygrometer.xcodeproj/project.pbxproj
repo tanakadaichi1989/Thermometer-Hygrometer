@@ -20,6 +20,7 @@
 		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
 		A15A89782955A97500C5D152 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A89772955A97500C5D152 /* MainView.swift */; };
 		A181695629586D6E007D56F5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181695529586D6E007D56F5 /* TimerManager.swift */; };
+		A1816958295876D1007D56F5 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1816957295876D1007D56F5 /* RecordView.swift */; };
 		A18A8B862954B81200CFEBBF /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B852954B81200CFEBBF /* RecordManager.swift */; };
 		A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */; };
 		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
@@ -62,6 +63,7 @@
 		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		A15A89772955A97500C5D152 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A181695529586D6E007D56F5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		A1816957295876D1007D56F5 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		A18A8B852954B81200CFEBBF /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
 		A18A8B882954B91100CFEBBF /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
 		A18A8B8A2954C85B00CFEBBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
+				A1816957295876D1007D56F5 /* RecordView.swift */,
 				A15A89772955A97500C5D152 /* MainView.swift */,
 				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
 				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
@@ -330,6 +333,7 @@
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 				A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */,
 				A18A8B862954B81200CFEBBF /* RecordManager.swift in Sources */,
+				A1816958295876D1007D56F5 /* RecordView.swift in Sources */,
 				A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

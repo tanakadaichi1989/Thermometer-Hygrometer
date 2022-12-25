@@ -9,14 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var manager: DeviceManager
-    @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
     
     var body: some View {
         VStack {
             if manager.hasDevice() {
-                MainView()
+                TabView {
+                    MainView()
+                        .tabItem {
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                            Text("Sensor")
+                        }
+                    RecordView()
+                        .tabItem {
+                            Image(systemName: "waveform.and.magnifyingglass")
+                            Text("Records")
+                        }
+                }
             } else {
-                UnconnectView()
+                TabView {
+                    UnconnectView()
+                        .tabItem {
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                            Text("Sensor")
+                        }
+                    RecordView()
+                        .tabItem {
+                            Image(systemName: "waveform.and.magnifyingglass")
+                            Text("Records")
+                        }
+                }
             }
         }
     }

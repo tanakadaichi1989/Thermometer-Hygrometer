@@ -17,15 +17,6 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            /*
-            VStack {
-                Text(records.count.description)
-            }
-            .padding()
-            List(records){ record in
-                Text("\(record.temperatureCelsius) \(record.humidityPercent) \(record.date?.description ?? "")")
-            }
-            */
             VStack {
                 Text(String.format(Date()))
                     .font(.title3)
