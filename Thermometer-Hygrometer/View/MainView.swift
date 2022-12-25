@@ -10,12 +10,22 @@ import CoreData
 
 struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
+    @EnvironmentObject var timerManager: TimerManager
     @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
     @State var isSave: Bool = false
     
     var body: some View {
         VStack {
+            /*
+            VStack {
+                Text(records.count.description)
+            }
+            .padding()
+            List(records){ record in
+                Text("\(record.temperatureCelsius) \(record.humidityPercent) \(record.date?.description ?? "")")
+            }
+            */
             VStack {
                 Text(String.format(Date()))
                     .font(.title3)
@@ -37,8 +47,16 @@ struct MainView: View {
                 }
                 .padding()
                 HStack {
-                    DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
-                    DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
+                    DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
+                        timerManager.startTimer(){
+                            if isSave { saveData() }
+                        }
+                    }
+                    DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
+                        timerManager.endTimer() {
+                            isSave = false
+                        }
+                    }
                 }
                 Text(manager.devices[0].peripheral.name ?? "unnamed device")
                     .font(.subheadline)
@@ -50,33 +68,35 @@ struct MainView: View {
             }
         }
         .onAppear {
-            self.startTimer()
+            // self.deleteAll()
         }
     }
 }
 
 extension MainView {
-    /*
-     private func deleteAll(){
-     print("deleteAll executed.")
-     let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-     fetchRequest.entity = Record.entity()
-     let records = try? viewContext.fetch(fetchRequest) as? [Record]
-     for record in records! {
-     viewContext.delete(record)
-     }
-     try! viewContext.save()
-     }
-     */
-    
-    private func startTimer(){
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
-            print("executed startTimer")
-            if isSave { self.saveData() }
-        }
-    }
-    
     private func saveData(){
         print("executed saveData")
+        let record = Record(context: viewContext)
+        guard let deviceName = manager.devices[0].peripheral.name else { return }
+        guard let temperatureCelsius = Double.convert(manager.recievedData[4],manager.recievedData[5]) else { return }
+        record.id = UUID()
+        record.date = Date()
+        record.deviceName = deviceName
+        record.temperatureCelsius = temperatureCelsius
+        record.humidityPercent = Double(manager.recievedData[6])
+        record.batteryLevel = Double(manager.batteryLevelData[2])
+        
+        try? viewContext.save()
+    }
+    
+    private func deleteAll(){
+        print("deleteAll executed.")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        fetchRequest.entity = Record.entity()
+        let records = try? viewContext.fetch(fetchRequest) as? [Record]
+        for record in records! {
+            viewContext.delete(record)
+        }
+        try! viewContext.save()
     }
 }
