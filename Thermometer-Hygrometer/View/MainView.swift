@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
+    @State var isSave: Bool = false
     
     var body: some View {
         VStack {
@@ -29,6 +31,12 @@ struct MainView: View {
                 }
                 .padding()
                 HStack {
+                    Text("Save measurement data")
+                    Toggle("", isOn: $isSave)
+                        .labelsHidden()
+                }
+                .padding()
+                HStack {
                     DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect)
                     DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect)
                 }
@@ -41,20 +49,34 @@ struct MainView: View {
                 }
             }
         }
+        .onAppear {
+            self.startTimer()
+        }
     }
 }
 
-extension ContentView {
+extension MainView {
     /*
-     private func save(){
-     let record = Record(context: viewContext)
-     guard let temperatureCelsius = Double.convert(manager.recievedData[4],manager.recievedData[5]) else { return }
-     record.id = UUID()
-     record.date = Date()
-     record.deviceName = manager.devices[0].peripheral.name ?? "unnamed device"
-     record.temperatureCelsius = temperatureCelsius
-     record.humidityPercent = Double(manager.recievedData[6])
-     record.batteryLevel = Double(manager.batteryLevelData[2] * 10)
+     private func deleteAll(){
+     print("deleteAll executed.")
+     let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+     fetchRequest.entity = Record.entity()
+     let records = try? viewContext.fetch(fetchRequest) as? [Record]
+     for record in records! {
+     viewContext.delete(record)
+     }
+     try! viewContext.save()
      }
      */
+    
+    private func startTimer(){
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
+            print("executed startTimer")
+            if isSave { self.saveData() }
+        }
+    }
+    
+    private func saveData(){
+        print("executed saveData")
+    }
 }
