@@ -11,7 +11,7 @@ import SwiftUI
 class TimerManager: ObservableObject {
     var timer: Timer?
     
-    func startTimer(completion: @escaping ( )-> Void){
+    func startTimer(completion: @escaping ( ) -> Void){
         if let timer = timer { timer.invalidate() }
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
             completion()

@@ -20,9 +20,10 @@ extension Double {
 }
 
 extension String {
-    static func format(_ date: Date) -> String {
-        let df = DateFormatter()
-        df.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        return df.string(from: date)
+    static func format(_ date: Date?) -> String {
+        guard let date = date else { return "-" }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        return formatter.string(from: date)
     }
 }
