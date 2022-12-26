@@ -26,16 +26,7 @@ struct DeviceConnectButtonView: View {
             }
             completion()
         } label: {
-            Text(label)
-                .font(.title3)
-                .fontWeight(.bold)
-                .padding(5)
-                .frame(width: 120, height: 120)
-                .foregroundColor(.primary)
-                .overlay(
-                    Circle()
-                        .stroke(Color.primary, lineWidth: 1)
-                )
+            CircleButton(label: label)
         }
         .padding()
 
