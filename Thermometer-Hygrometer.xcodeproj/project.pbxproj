@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A104326529593E0E0089BCAC /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104326429593E0E0089BCAC /* CircleButton.swift */; };
 		A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */; };
 		A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */; };
 		A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B4294DD92D00C75433 /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A104326429593E0E0089BCAC /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConnectButtonView.swift; sourceTree = "<group>"; };
 		A153F8AF294DD92D00C75433 /* Thermometer-Hygrometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermometer-Hygrometer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerApp.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		A18A8B932955727300CFEBBF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A104326429593E0E0089BCAC /* CircleButton.swift */,
 				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
 				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
 			);
@@ -331,6 +334,7 @@
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
 				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
+				A104326529593E0E0089BCAC /* CircleButton.swift in Sources */,
 				A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */,
 				A18A8B862954B81200CFEBBF /* RecordManager.swift in Sources */,
 				A1816958295876D1007D56F5 /* RecordView.swift in Sources */,

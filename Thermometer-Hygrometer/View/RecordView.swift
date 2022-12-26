@@ -44,7 +44,7 @@ extension RecordView {
         Button {
             self.isShowAlert = true
         } label: {
-            Text("delete all records")
+            CircleButton(label: "delete\nall records")
         }
         .alert(isPresented: $isShowAlert){
             Alert(
@@ -54,8 +54,6 @@ extension RecordView {
                 secondaryButton: .default(Text("Cancel"))
             )
         }
-        .buttonStyle(.borderedProminent)
-        .padding(50)
     }
     
     private func deleteAll(){
