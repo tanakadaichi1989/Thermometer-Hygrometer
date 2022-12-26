@@ -39,7 +39,7 @@ struct MainView: View {
                 .padding()
                 HStack {
                     DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
-                        timerManager.startTimer(){
+                        timerManager.startTimer(withTimeInterval: 10){
                             if isSave { saveData() }
                         }
                     }
@@ -58,9 +58,6 @@ struct MainView: View {
                 }
             }
         }
-        .onAppear {
-            // self.deleteAll()
-        }
     }
 }
 
@@ -78,16 +75,5 @@ extension MainView {
         record.batteryLevel = Double(manager.batteryLevelData[2])
         
         try? viewContext.save()
-    }
-    
-    private func deleteAll(){
-        print("deleteAll executed.")
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        fetchRequest.entity = Record.entity()
-        let records = try? viewContext.fetch(fetchRequest) as? [Record]
-        for record in records! {
-            viewContext.delete(record)
-        }
-        try! viewContext.save()
     }
 }
