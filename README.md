@@ -57,23 +57,19 @@ https://meshprj.com/jp/products/blocks/MESH-100TH.html
 **※ GATT 通信の特徴**
 **サービス** と **キャラクタリスティック** の形で測定データをやり取りする
 
-```plantuml
-@startuml
-PC <- MESH: アドバタイズ
-PC <- MESH: アドバタイズ
-PC -> MESH: スキャン
-PC <- MESH: アドバタイズ
-PC <- MESH: アドバタイズ
-PC -> MESH: 接続要求
-
-loop GATT通信 0.5秒ごと
-PC <- MESH: 温度・湿度の測定データを送信
-end loop
-
-PC -> MESH: 切断要求
-PC <- MESH: アドバタイズ
-PC <- MESH: アドバタイズ
-@enduml
+```marmaid
+sequenceDiagram
+    MESH ->> PC: アドバタイズ
+    MESH ->> PC: アドバタイズ
+    MESH ->> PC: アドバタイズ
+    PC ->> MESH: 接続要求
+    loop GATT通信 0.5秒ごと
+    MESH ->> PC: 温度・湿度の測定データを送信 
+    end
+    PC ->> MESH: 切断要求
+    MESH ->> PC: アドバタイズ
+    MESH ->> PC: アドバタイズ
+    MESH ->> PC: アドバタイズ
 ```
 
 ## 実際にアプリを動かす
