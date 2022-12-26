@@ -57,7 +57,7 @@ https://meshprj.com/jp/products/blocks/MESH-100TH.html
 **※ GATT 通信の特徴**
 **サービス** と **キャラクタリスティック** の形で測定データをやり取りする
 
-```marmaid
+```mermaid
 sequenceDiagram
     MESH ->> PC: アドバタイズ
     MESH ->> PC: アドバタイズ
