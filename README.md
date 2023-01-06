@@ -90,7 +90,6 @@ https://www.youtube.com/watch?v=IO9onsm9LBY
 
 ## 今後したいこと
 - WidgetKit を利用して、アプリを立ち上げなくても温度・湿度を確認する。
-- CoreData や Realm を利用して、測定したデータを永続化する。
 - App Store でこのアプリを配信する。
 
 ## 参考資料
