@@ -12,7 +12,7 @@ struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @EnvironmentObject var timerManager: TimerManager
     @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
+    // @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
     @State var isSave: Bool = false
     
     var body: some View {
@@ -31,16 +31,18 @@ struct MainView: View {
                     }
                 }
                 .padding()
+                /*
                 HStack {
                     Text("Save measurement data")
                     Toggle("", isOn: $isSave)
                         .labelsHidden()
                 }
                 .padding()
+                */
                 HStack {
                     DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
                         timerManager.startTimer(withTimeInterval: 10){
-                            if isSave { saveData() }
+                            // if isSave { saveData() }
                         }
                     }
                     DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
@@ -61,6 +63,7 @@ struct MainView: View {
     }
 }
 
+/*
 extension MainView {
     private func saveData(){
         print("executed saveData")
@@ -77,3 +80,4 @@ extension MainView {
         try? viewContext.save()
     }
 }
+*/
