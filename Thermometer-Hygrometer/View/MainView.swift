@@ -11,9 +11,9 @@ import CoreData
 struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @EnvironmentObject var timerManager: TimerManager
-    @Environment(\.managedObjectContext) var viewContext
+    // @Environment(\.managedObjectContext) var viewContext
     // @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
-    @State var isSave: Bool = false
+    // @State var isSave: Bool = false
     
     var body: some View {
         VStack {
@@ -47,7 +47,7 @@ struct MainView: View {
                     }
                     DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
                         timerManager.endTimer() {
-                            isSave = false
+                            // isSave = false
                         }
                     }
                 }
