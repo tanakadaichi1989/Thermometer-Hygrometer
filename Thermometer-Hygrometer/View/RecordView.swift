@@ -9,15 +9,12 @@ import SwiftUI
 import CoreData
 
 struct RecordView: View {
-    /*
     @Environment(\.managedObjectContext) var recordViewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
     @State private var isShowAlert = false
-     */
     
     var body: some View {
         VStack {
-            /*
             Text("\(records.count.description) records")
                 .font(.title)
                 .fontWeight(.bold)
@@ -36,15 +33,14 @@ struct RecordView: View {
                     .fontWeight(.thin)
                 }
             }
+            .padding()
             .frame(height: UIScreen.main.bounds.height / 2)
             confirmButton
-             */
         }
     }
 }
 
 extension RecordView {
-    /*
     private var confirmButton: some View {
         Button {
             self.isShowAlert = true
@@ -71,5 +67,4 @@ extension RecordView {
         }
         try! recordViewContext.save()
     }
-     */
 }

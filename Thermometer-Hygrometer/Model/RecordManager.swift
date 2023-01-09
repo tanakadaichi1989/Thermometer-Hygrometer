@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct RecordManager {
+class RecordManager: ObservableObject {
     let container: NSPersistentContainer = NSPersistentContainer(name: "Record")
     init(){
         container.loadPersistentStores { storeDescription, error in
