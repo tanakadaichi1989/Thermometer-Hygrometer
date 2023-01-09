@@ -35,6 +35,7 @@ struct RecordView: View {
                 }
                 .padding()
                 .frame(height: UIScreen.main.bounds.height / 2)
+                confirmButton
             } else {
                 Text("No measurement data")
                     .font(.title)
@@ -48,5 +49,25 @@ struct RecordView: View {
 extension RecordView {
     private func getLevel(count: Int) -> String {
         count == 1 ? "record" : "records"
+    }
+    
+    private var confirmButton: some View {
+        Button {
+            self.isShowAlert = true
+        } label: {
+            CircleButton(label: "delete\nall records")
+        }
+        .alert(isPresented: $isShowAlert){
+            Alert(
+                title: Text("Confirm"),
+                message: Text("Do you really want to delete all records?"),
+                primaryButton: .destructive(Text("Execute delete All")){ deleteAll() },
+                secondaryButton: .default(Text("Cancel"))
+            )
+        }
+    }
+    
+    private func deleteAll(){
+        recordManager.deleteAll()
     }
 }

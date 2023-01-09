@@ -27,7 +27,6 @@
 		A15A89782955A97500C5D152 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A89772955A97500C5D152 /* MainView.swift */; };
 		A181695629586D6E007D56F5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181695529586D6E007D56F5 /* TimerManager.swift */; };
 		A1816958295876D1007D56F5 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1816957295876D1007D56F5 /* RecordView.swift */; };
-		A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */; };
 		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
 		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */; };
@@ -73,7 +72,6 @@
 		A15A89772955A97500C5D152 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A181695529586D6E007D56F5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		A1816957295876D1007D56F5 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
-		A18A8B882954B91100CFEBBF /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
 		A18A8B8A2954C85B00CFEBBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataView.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				A153F8B9294DD92E00C75433 /* Preview Assets.xcassets */,
-				A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 				A104326529593E0E0089BCAC /* CircleButton.swift in Sources */,
-				A18A8B892954B91100CFEBBF /* Record.xcdatamodeld in Sources */,
 				A1816958295876D1007D56F5 /* RecordView.swift in Sources */,
 				A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */,
 			);
@@ -710,19 +706,6 @@
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A18A8B882954B91100CFEBBF /* Record.xcdatamodel */,
-			);
-			currentVersion = A18A8B882954B91100CFEBBF /* Record.xcdatamodel */;
-			path = Record.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A153F8A7294DD92D00C75433 /* Project object */;
 }

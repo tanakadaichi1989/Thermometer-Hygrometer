@@ -31,6 +31,9 @@ class RecordManager: ObservableObject {
     }
     
     func deleteAll() {
+        service.deleteAll { records in
+            self.records = records
+        }
     }
 }
 
