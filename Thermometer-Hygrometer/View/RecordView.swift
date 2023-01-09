@@ -13,6 +13,8 @@ struct RecordView: View {
     
     var body: some View {
         VStack {
+            Text("Saving measurement data function will be provided in the future.")
+                .padding()
             /*
             Text("\(records.count.description) records")
                 .font(.title)
