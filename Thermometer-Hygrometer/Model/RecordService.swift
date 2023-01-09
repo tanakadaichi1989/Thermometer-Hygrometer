@@ -22,14 +22,14 @@ class RecordService {
             RecordService.realm.add(record)
             completion(record)
         }
+    }
         
-        func deleteAll(completion: ([Record]) -> Void) {
-            try! RecordService.realm.write {
-                RecordService.realm.deleteAll()
-            }
-            self.fetch { records in
+    func deleteAll(completion: ([Record]) -> Void) {
+        try! RecordService.realm.write {
+            RecordService.realm.deleteAll()
+        }
+        self.fetch { records in
                 completion(Array(records))
-            }
         }
     }
 }
