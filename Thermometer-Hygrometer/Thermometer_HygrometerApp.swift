@@ -12,7 +12,7 @@ import CoreBluetooth
 struct Thermometer_HygrometerApp: App {
     @StateObject var manager: DeviceManager = DeviceManager()
     @StateObject var timerManager: TimerManager = TimerManager()
-    @StateObject var recordManager: RecordManager = RecordManager()
+    var recordManager: RecordManager = RecordManager()
     
     var body: some Scene {
         WindowGroup {
