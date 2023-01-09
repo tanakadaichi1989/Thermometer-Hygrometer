@@ -2,19 +2,35 @@
 //  RecordManager.swift
 //  Thermometer-Hygrometer
 //
-//  Created by 田中大地 on 2022/12/23.
+//  Created by 田中大地 on 2023/01/09.
 //
 
 import Foundation
-import CoreData
+import RealmSwift
 
 class RecordManager: ObservableObject {
-    let container: NSPersistentContainer = NSPersistentContainer(name: "Record")
+    @Published var records:[Record] = [Record]()
+    private let service = RecordService()
+    
     init(){
-        container.loadPersistentStores { storeDescription, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
+        service.fetch { records in
+            self.records = Array(records)
         }
     }
+    
+    func getRecords(completion: @escaping ([Record]) -> Void) {
+        service.fetch { records in
+            completion(Array(records))
+        }
+    }
+    
+    func add(_ record: Record) {
+        service.add(record) { record in
+            self.records.append(record)
+        }
+    }
+    
+    func deleteAll() {
+    }
 }
+

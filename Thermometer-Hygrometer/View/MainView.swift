@@ -12,6 +12,7 @@ import CoreData
 struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @EnvironmentObject var timerManager: TimerManager
+    @EnvironmentObject var recordManager: RecordManager
     @State var isSave: Bool = false
     
     var body: some View {
@@ -41,7 +42,7 @@ struct MainView: View {
                 HStack {
                     DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
                         timerManager.startTimer(withTimeInterval: 10){
-                            // if isSave { saveData() }
+                            if isSave { saveRecord() }
                         }
                     }
                     DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
@@ -59,5 +60,14 @@ struct MainView: View {
                 }
             }
         }
+    }
+}
+
+extension MainView {
+    private func saveRecord(){
+        guard let deviceName = manager.devices[0].peripheral.name else { return }
+        guard let temperatureCelsius = Double.convert(manager.recievedData[4],manager.recievedData[5]) else { return }
+        let record = Record(date: Date(), deviceName: deviceName, temperatureCelsius: temperatureCelsius, humidityPercent: Double(manager.recievedData[6]), batteryLevel: Double(manager.batteryLevelData[2]))
+        recordManager.add(record)
     }
 }

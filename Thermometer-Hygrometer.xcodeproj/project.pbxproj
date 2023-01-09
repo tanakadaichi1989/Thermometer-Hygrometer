@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A104326529593E0E0089BCAC /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104326429593E0E0089BCAC /* CircleButton.swift */; };
+		A1176F6F296C5FBB00B4D585 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F6E296C5FBB00B4D585 /* Realm */; };
+		A1176F71296C5FBB00B4D585 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F70296C5FBB00B4D585 /* RealmSwift */; };
+		A1176F73296C5FCC00B4D585 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F72296C5FCC00B4D585 /* Record.swift */; };
+		A1176F75296C610B00B4D585 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F74296C610B00B4D585 /* RecordService.swift */; };
+		A1176F77296C61DB00B4D585 /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F76296C61DB00B4D585 /* RecordManager.swift */; };
 		A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */; };
 		A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */; };
 		A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B4294DD92D00C75433 /* ContentView.swift */; };
@@ -48,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		A104326429593E0E0089BCAC /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		A1176F72296C5FCC00B4D585 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		A1176F74296C610B00B4D585 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
+		A1176F76296C61DB00B4D585 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
 		A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConnectButtonView.swift; sourceTree = "<group>"; };
 		A153F8AF294DD92D00C75433 /* Thermometer-Hygrometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermometer-Hygrometer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerApp.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1176F71296C5FBB00B4D585 /* RealmSwift in Frameworks */,
+				A1176F6F296C5FBB00B4D585 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				A153F8DC294DDC9700C75433 /* Device.swift */,
+				A1176F72296C5FCC00B4D585 /* Record.swift */,
+				A1176F74296C610B00B4D585 /* RecordService.swift */,
+				A1176F76296C61DB00B4D585 /* RecordManager.swift */,
 				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
 				A181695529586D6E007D56F5 /* TimerManager.swift */,
 			);
@@ -206,6 +219,10 @@
 			dependencies = (
 			);
 			name = "Thermometer-Hygrometer";
+			packageProductDependencies = (
+				A1176F6E296C5FBB00B4D585 /* Realm */,
+				A1176F70296C5FBB00B4D585 /* RealmSwift */,
+			);
 			productName = "Thermometer-Hygrometer";
 			productReference = A153F8AF294DD92D00C75433 /* Thermometer-Hygrometer.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +295,9 @@
 				Base,
 			);
 			mainGroup = A153F8A6294DD92D00C75433;
+			packageReferences = (
+				A1176F6D296C5FBB00B4D585 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = A153F8B0294DD92D00C75433 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,12 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1176F77296C61DB00B4D585 /* RecordManager.swift in Sources */,
 				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
 				A15A89782955A97500C5D152 /* MainView.swift in Sources */,
+				A1176F75296C610B00B4D585 /* RecordService.swift in Sources */,
 				A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */,
 				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
 				A181695629586D6E007D56F5 /* TimerManager.swift in Sources */,
+				A1176F73296C5FCC00B4D585 /* Record.swift in Sources */,
 				A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
@@ -663,6 +686,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1176F6D296C5FBB00B4D585 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1176F6E296C5FBB00B4D585 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1176F6D296C5FBB00B4D585 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		A1176F70296C5FBB00B4D585 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1176F6D296C5FBB00B4D585 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A18A8B872954B91100CFEBBF /* Record.xcdatamodeld */ = {
