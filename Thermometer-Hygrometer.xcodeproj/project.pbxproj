@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A104326529593E0E0089BCAC /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104326429593E0E0089BCAC /* CircleButton.swift */; };
-		A1176F68296C234200B4D585 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F66296C234200B4D585 /* Record+CoreDataClass.swift */; };
-		A1176F69296C234200B4D585 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F67296C234200B4D585 /* Record+CoreDataProperties.swift */; };
 		A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */; };
 		A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */; };
 		A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8B4294DD92D00C75433 /* ContentView.swift */; };
@@ -50,8 +48,6 @@
 
 /* Begin PBXFileReference section */
 		A104326429593E0E0089BCAC /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
-		A1176F66296C234200B4D585 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A1176F67296C234200B4D585 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConnectButtonView.swift; sourceTree = "<group>"; };
 		A153F8AF294DD92D00C75433 /* Thermometer-Hygrometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermometer-Hygrometer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A153F8B2294DD92D00C75433 /* Thermometer_HygrometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermometer_HygrometerApp.swift; sourceTree = "<group>"; };
@@ -101,19 +97,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1176F6A296C2D6300B4D585 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				A1176F66296C234200B4D585 /* Record+CoreDataClass.swift */,
-				A1176F67296C234200B4D585 /* Record+CoreDataProperties.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		A153F8A6294DD92D00C75433 = {
 			isa = PBXGroup;
 			children = (
-				A1176F6A296C2D6300B4D585 /* CoreData */,
 				A153F8B1294DD92D00C75433 /* Thermometer-Hygrometer */,
 				A153F8C2294DD92F00C75433 /* Thermometer-HygrometerTests */,
 				A153F8CC294DD92F00C75433 /* Thermometer-HygrometerUITests */,
@@ -337,14 +323,12 @@
 				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
 				A15A89782955A97500C5D152 /* MainView.swift in Sources */,
 				A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */,
-				A1176F68296C234200B4D585 /* Record+CoreDataClass.swift in Sources */,
 				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
 				A181695629586D6E007D56F5 /* TimerManager.swift in Sources */,
 				A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
-				A1176F69296C234200B4D585 /* Record+CoreDataProperties.swift in Sources */,
 				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 				A104326529593E0E0089BCAC /* CircleButton.swift in Sources */,
@@ -507,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Thermometer-Hygrometer/Preview Content\"";
 				DEVELOPMENT_TEAM = YUH8WT596Y;
 				ENABLE_PREVIEWS = YES;
@@ -538,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Thermometer-Hygrometer/Preview Content\"";
 				DEVELOPMENT_TEAM = YUH8WT596Y;
 				ENABLE_PREVIEWS = YES;
