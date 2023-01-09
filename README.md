@@ -1,13 +1,5 @@
 # Thermometer-Hygrometer
 
-## App Store リンク
-
-2023/01/09 から App Store での配信を開始しました 🎉
-https://apps.apple.com/us/app/thermometer-hygrometer/id1663445896
-
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/199441/7138cbc7-003a-0614-df9e-9b408c73f0dd.jpeg" width="300">
-
-
 ## アプリの特徴
 ソニーが販売している IoT タグ MESH を利用して、温度・湿度を測定する。
 ![スクリーンショット 2022-12-20 0.10.25.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/199441/7b987b7e-4913-532d-33e6-719ceedab15f.png)
@@ -99,6 +91,14 @@ https://www.youtube.com/watch?v=IO9onsm9LBY
 
 ## 今後したいこと
 - WidgetKit を利用して、アプリを立ち上げなくても温度・湿度を確認する。
+
+## App Store 配信開始
+
+2023/01/09 から App Store で配信を開始しました 🎉
+
+https://apps.apple.com/us/app/thermometer-hygrometer/id1663445896
+
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/199441/7138cbc7-003a-0614-df9e-9b408c73f0dd.jpeg" width="300">
 
 ## 参考資料
 
