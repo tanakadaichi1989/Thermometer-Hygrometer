@@ -18,7 +18,6 @@ struct RecordView: View {
                 Text("\(recordManager.records.count.description) \(getLevel(count: recordManager.records.count))")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding()
                 List(recordManager.records){ record in
                     VStack(alignment: .leading) {
                         HStack {
@@ -33,7 +32,9 @@ struct RecordView: View {
                         .fontWeight(.thin)
                     }
                 }
-                .padding()
+                .onAppear {
+                    recordManager.records.sort { $0.date > $1.date }
+                }
                 .frame(height: UIScreen.main.bounds.height / 2)
                 confirmButton
             } else {
@@ -65,6 +66,7 @@ extension RecordView {
                 secondaryButton: .default(Text("Cancel"))
             )
         }
+        .padding()
     }
     
     private func deleteAll(){

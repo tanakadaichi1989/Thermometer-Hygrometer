@@ -28,6 +28,7 @@ class RecordManager: ObservableObject {
         service.add(record) { record in
             self.records.append(record)
         }
+        self.records.sort { $0.date > $1.date }
     }
     
     func deleteAll() {
