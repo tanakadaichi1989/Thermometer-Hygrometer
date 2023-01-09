@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 import CoreData
 
 struct MainView: View {
@@ -13,6 +14,7 @@ struct MainView: View {
     @EnvironmentObject var timerManager: TimerManager
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
+    
     @State var isSave: Bool = false
     
     var body: some View {
