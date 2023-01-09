@@ -12,9 +12,6 @@ import CoreData
 struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @EnvironmentObject var timerManager: TimerManager
-    @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var records: FetchedResults<Record>
-    
     @State var isSave: Bool = false
     
     var body: some View {
@@ -44,7 +41,7 @@ struct MainView: View {
                 HStack {
                     DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
                         timerManager.startTimer(withTimeInterval: 10){
-                            if isSave { saveData() }
+                            // if isSave { saveData() }
                         }
                     }
                     DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
@@ -62,22 +59,5 @@ struct MainView: View {
                 }
             }
         }
-    }
-}
-
-extension MainView {
-    private func saveData(){
-        print("executed saveData")
-        let record = Record(context: viewContext)
-        guard let deviceName = manager.devices[0].peripheral.name else { return }
-        guard let temperatureCelsius = Double.convert(manager.recievedData[4],manager.recievedData[5]) else { return }
-        record.id = UUID()
-        record.date = Date()
-        record.deviceName = deviceName
-        record.temperatureCelsius = temperatureCelsius
-        record.humidityPercent = Double(manager.recievedData[6])
-        record.batteryLevel = Double(manager.batteryLevelData[2])
-        
-        try? viewContext.save()
     }
 }
