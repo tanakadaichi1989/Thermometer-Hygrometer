@@ -13,8 +13,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if manager.hasDevice() {
-                MainView()
-                /*
                 TabView {
                     MainView()
                         .tabItem {
@@ -27,10 +25,7 @@ struct ContentView: View {
                             Text("Records")
                         }
                 }
-                */
             } else {
-                UnconnectView()
-                /*
                 TabView {
                     UnconnectView()
                         .tabItem {
@@ -43,7 +38,6 @@ struct ContentView: View {
                             Text("Records")
                         }
                 }
-                */
             }
         }
     }
