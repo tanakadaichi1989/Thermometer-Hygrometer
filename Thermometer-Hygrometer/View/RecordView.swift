@@ -9,7 +9,6 @@ import SwiftUI
 import CoreData
 
 struct RecordView: View {
-    @Environment(\.managedObjectContext) var recordViewContext
     @State private var isShowAlert = false
     
     var body: some View {
@@ -38,34 +37,5 @@ struct RecordView: View {
             confirmButton
              */
         }
-    }
-}
-
-extension RecordView {
-    private var confirmButton: some View {
-        Button {
-            self.isShowAlert = true
-        } label: {
-            CircleButton(label: "delete\nall records")
-        }
-        .alert(isPresented: $isShowAlert){
-            Alert(
-                title: Text("Confirm"),
-                message: Text("Do you really want to delete all records?"),
-                primaryButton: .destructive(Text("Execute delete All")){ deleteAll() },
-                secondaryButton: .default(Text("Cancel"))
-            )
-        }
-    }
-    
-    private func deleteAll(){
-        print("deleteAll executed.")
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        fetchRequest.entity = Record.entity()
-        let records = try? recordViewContext.fetch(fetchRequest) as? [Record]
-        for record in records! {
-            recordViewContext.delete(record)
-        }
-        try! recordViewContext.save()
     }
 }
