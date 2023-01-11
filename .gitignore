@@ -20,6 +20,7 @@ DerivedData/
 ## Xcode Patch
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
+!*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 ## library
