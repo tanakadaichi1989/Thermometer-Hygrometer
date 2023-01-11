@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import RealmSwift
 
 struct RecordView: View {
     @EnvironmentObject var recordManager: RecordManager
@@ -36,7 +37,10 @@ struct RecordView: View {
                     recordManager.records.sort { $0.date > $1.date }
                 }
                 .frame(height: UIScreen.main.bounds.height / 2)
-                confirmButton
+                //HStack {
+                //exportConfirmButton
+                deleteConfirmButton
+                //}
             } else {
                 Text("No measurement data")
                     .font(.title)
@@ -52,7 +56,7 @@ extension RecordView {
         count == 1 ? "record" : "records"
     }
     
-    private var confirmButton: some View {
+    private var deleteConfirmButton: some View {
         Button {
             self.isShowAlert = true
         } label: {
@@ -72,4 +76,14 @@ extension RecordView {
     private func deleteAll(){
         recordManager.deleteAll()
     }
+    
+    /*
+    private var exportConfirmButton: some View {
+        Button {
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        } label: {
+             CircleButton(label: "export\nall records")
+        }
+    }
+    */
 }
