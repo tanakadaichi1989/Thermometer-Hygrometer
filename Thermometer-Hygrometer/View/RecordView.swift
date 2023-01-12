@@ -37,10 +37,10 @@ struct RecordView: View {
                     recordManager.records.sort { $0.date > $1.date }
                 }
                 .frame(height: UIScreen.main.bounds.height / 2)
-                //HStack {
-                //exportConfirmButton
-                deleteConfirmButton
-                //}
+                HStack {
+                    exportConfirmButton
+                    deleteConfirmButton
+                }
             } else {
                 Text("No measurement data")
                     .font(.title)
@@ -73,17 +73,23 @@ extension RecordView {
         .padding()
     }
     
+    private var exportConfirmButton: some View {
+        Button {
+            print(Realm.Configuration.defaultConfiguration.fileURL)
+            shareData()
+        } label: {
+            CircleButton(label: "export\nall records")
+        }
+    }
+    
     private func deleteAll(){
         recordManager.deleteAll()
     }
     
-    /*
-    private var exportConfirmButton: some View {
-        Button {
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
-        } label: {
-             CircleButton(label: "export\nall records")
-        }
+    private func shareData(){
+        let activityItems = [Realm.Configuration.defaultConfiguration.fileURL!] as [Any]
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        let viewController = UIApplication.shared.windows.first?.rootViewController
+        viewController?.present(activityVC, animated: true)
     }
-    */
 }
