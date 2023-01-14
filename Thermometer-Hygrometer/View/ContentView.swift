@@ -24,6 +24,11 @@ struct ContentView: View {
                             Image(systemName: "waveform.and.magnifyingglass")
                             Text("Records")
                         }
+                    SettingView()
+                        .tabItem {
+                            Image(systemName: "gearshape")
+                            Text("Settings")
+                        }
                 }
             } else {
                 TabView {
@@ -36,6 +41,11 @@ struct ContentView: View {
                         .tabItem {
                             Image(systemName: "waveform.and.magnifyingglass")
                             Text("Records")
+                        }
+                    SettingView()
+                        .tabItem {
+                            Image(systemName: "gearshape")
+                            Text("Settings")
                         }
                 }
             }
