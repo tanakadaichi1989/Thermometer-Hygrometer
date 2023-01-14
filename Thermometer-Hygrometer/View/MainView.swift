@@ -13,6 +13,7 @@ struct MainView: View {
     @EnvironmentObject var manager: DeviceManager
     @EnvironmentObject var timerManager: TimerManager
     @EnvironmentObject var recordManager: RecordManager
+    @EnvironmentObject var settingManager: SettingManager
     @State var isSave: Bool = false
     
     var body: some View {
