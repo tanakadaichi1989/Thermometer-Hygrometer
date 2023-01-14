@@ -13,6 +13,7 @@ struct Thermometer_HygrometerApp: App {
     @StateObject var manager: DeviceManager = DeviceManager()
     @StateObject var timerManager: TimerManager = TimerManager()
     @StateObject var recordManager: RecordManager = RecordManager()
+    @StateObject var settingManager: SettingManager = SettingManager()
     
     var body: some Scene {
         WindowGroup {
@@ -20,6 +21,7 @@ struct Thermometer_HygrometerApp: App {
                 .environmentObject(manager)
                 .environmentObject(timerManager)
                 .environmentObject(recordManager)
+                .environmentObject(settingManager)
         }
     }
 }
