@@ -1,5 +1,5 @@
 //
-//  RecordView.swift
+//  RecordsView.swift
 //  Thermometer-Hygrometer
 //
 //  Created by 田中大地 on 2022/12/25.
@@ -9,16 +9,13 @@ import SwiftUI
 import CoreData
 import RealmSwift
 
-struct RecordView: View {
+struct RecordsView: View {
     @EnvironmentObject var recordManager: RecordManager
     @State private var isShowAlert = false
     
     var body: some View {
-        VStack {
-            if recordManager.records.count > 0 {
-                Text("\(recordManager.records.count.description) \(getLevel(count: recordManager.records.count))")
-                    .font(.title)
-                    .fontWeight(.bold)
+        if (recordManager.records.count > 0) {
+            NavigationStack {
                 List(recordManager.records){ record in
                     VStack(alignment: .leading) {
                         HStack {
@@ -36,22 +33,23 @@ struct RecordView: View {
                 .onAppear {
                     recordManager.records.sort { $0.date > $1.date }
                 }
-                .frame(height: UIScreen.main.bounds.height / 2)
-                HStack {
+                .navigationTitle(                    Text("\(recordManager.records.count.description) \(getLevel(count: recordManager.records.count))")
+                )
+                .toolbar {
                     exportConfirmButton
                     deleteConfirmButton
                 }
-            } else {
-                Text("No measurement data")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
             }
+        } else {
+            Text("No measurement data")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding()
         }
     }
 }
 
-extension RecordView {
+extension RecordsView {
     private func getLevel(count: Int) -> String {
         count == 1 ? "record" : "records"
     }
@@ -60,7 +58,8 @@ extension RecordView {
         Button {
             self.isShowAlert = true
         } label: {
-            CircleButton(label: "delete\nall records")
+            Image(systemName: "trash")
+            Text("delete all")
         }
         .alert(isPresented: $isShowAlert){
             Alert(
@@ -78,7 +77,8 @@ extension RecordView {
             print(Realm.Configuration.defaultConfiguration.fileURL)
             shareData()
         } label: {
-            CircleButton(label: "export\nall records")
+            Image(systemName: "square.and.arrow.up")
+            Text("export all")
         }
     }
     
