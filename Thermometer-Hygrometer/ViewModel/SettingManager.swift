@@ -8,17 +8,5 @@
 import Foundation
 
 class SettingManager: ObservableObject {
-    @Published var language: LanguageConstant {
-        didSet {
-            print("Now App Language: \(self.language)")
-        }
-    }
     
-    init(){
-        self.language = LanguageConstant.English
-    }
-    
-    func changeAppLanguage(selected: LanguageConstant){
-        self.language = selected
-    }
 }
