@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A104326529593E0E0089BCAC /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104326429593E0E0089BCAC /* CircleButton.swift */; };
+		A114035829728440006AC465 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035729728440006AC465 /* SettingView.swift */; };
+		A114035C29728604006AC465 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035B29728604006AC465 /* SettingManager.swift */; };
+		A114035E297286CF006AC465 /* LanguageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035D297286CF006AC465 /* LanguageConstant.swift */; };
 		A1176F6F296C5FBB00B4D585 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F6E296C5FBB00B4D585 /* Realm */; };
 		A1176F71296C5FBB00B4D585 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F70296C5FBB00B4D585 /* RealmSwift */; };
 		A1176F73296C5FCC00B4D585 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F72296C5FCC00B4D585 /* Record.swift */; };
@@ -26,7 +29,7 @@
 		A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A153F8E0294DDE5500C75433 /* DeviceManager.swift */; };
 		A15A89782955A97500C5D152 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A89772955A97500C5D152 /* MainView.swift */; };
 		A181695629586D6E007D56F5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181695529586D6E007D56F5 /* TimerManager.swift */; };
-		A1816958295876D1007D56F5 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1816957295876D1007D56F5 /* RecordView.swift */; };
+		A1816958295876D1007D56F5 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1816957295876D1007D56F5 /* RecordsView.swift */; };
 		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
 		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		A104326429593E0E0089BCAC /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		A114035729728440006AC465 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A114035B29728604006AC465 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		A114035D297286CF006AC465 /* LanguageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageConstant.swift; sourceTree = "<group>"; };
 		A1176F72296C5FCC00B4D585 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		A1176F74296C610B00B4D585 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		A1176F76296C61DB00B4D585 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
@@ -71,7 +77,7 @@
 		A153F8E0294DDE5500C75433 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		A15A89772955A97500C5D152 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A181695529586D6E007D56F5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
-		A1816957295876D1007D56F5 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		A1816957295876D1007D56F5 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
 		A18A8B8A2954C85B00CFEBBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataView.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 				A1176F76296C61DB00B4D585 /* RecordManager.swift */,
 				A153F8E0294DDE5500C75433 /* DeviceManager.swift */,
 				A181695529586D6E007D56F5 /* TimerManager.swift */,
+				A114035B29728604006AC465 /* SettingManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,7 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
-				A1816957295876D1007D56F5 /* RecordView.swift */,
+				A114035729728440006AC465 /* SettingView.swift */,
+				A1816957295876D1007D56F5 /* RecordsView.swift */,
 				A15A89772955A97500C5D152 /* MainView.swift */,
 				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
 				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
@@ -204,6 +212,7 @@
 				A104326429593E0E0089BCAC /* CircleButton.swift */,
 				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
 				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
+				A114035D297286CF006AC465 /* LanguageConstant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -346,8 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1176F77296C61DB00B4D585 /* RecordManager.swift in Sources */,
+				A114035E297286CF006AC465 /* LanguageConstant.swift in Sources */,
 				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
 				A15A89782955A97500C5D152 /* MainView.swift in Sources */,
+				A114035829728440006AC465 /* SettingView.swift in Sources */,
 				A1176F75296C610B00B4D585 /* RecordService.swift in Sources */,
 				A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */,
 				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
@@ -358,9 +369,10 @@
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
 				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,
+				A114035C29728604006AC465 /* SettingManager.swift in Sources */,
 				A153F8B3294DD92D00C75433 /* Thermometer_HygrometerApp.swift in Sources */,
 				A104326529593E0E0089BCAC /* CircleButton.swift in Sources */,
-				A1816958295876D1007D56F5 /* RecordView.swift in Sources */,
+				A1816958295876D1007D56F5 /* RecordsView.swift in Sources */,
 				A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

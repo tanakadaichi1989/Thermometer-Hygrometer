@@ -19,7 +19,7 @@ struct ContentView: View {
                             Image(systemName: "antenna.radiowaves.left.and.right")
                             Text("Sensor")
                         }
-                    RecordView()
+                    RecordsView()
                         .tabItem {
                             Image(systemName: "waveform.and.magnifyingglass")
                             Text("Records")
@@ -32,7 +32,7 @@ struct ContentView: View {
                             Image(systemName: "antenna.radiowaves.left.and.right")
                             Text("Sensor")
                         }
-                    RecordView()
+                    RecordsView()
                         .tabItem {
                             Image(systemName: "waveform.and.magnifyingglass")
                             Text("Records")
