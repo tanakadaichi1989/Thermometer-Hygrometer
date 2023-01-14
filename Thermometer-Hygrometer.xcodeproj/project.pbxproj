@@ -11,6 +11,8 @@
 		A114035829728440006AC465 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035729728440006AC465 /* SettingView.swift */; };
 		A114035C29728604006AC465 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035B29728604006AC465 /* SettingManager.swift */; };
 		A114035E297286CF006AC465 /* LanguageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035D297286CF006AC465 /* LanguageConstant.swift */; };
+		A11403602972A0EE006AC465 /* LanguageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114035F2972A0EE006AC465 /* LanguageSettingView.swift */; };
+		A11403622972A32F006AC465 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11403612972A32F006AC465 /* LanguageView.swift */; };
 		A1176F6F296C5FBB00B4D585 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F6E296C5FBB00B4D585 /* Realm */; };
 		A1176F71296C5FBB00B4D585 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A1176F70296C5FBB00B4D585 /* RealmSwift */; };
 		A1176F73296C5FCC00B4D585 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1176F72296C5FCC00B4D585 /* Record.swift */; };
@@ -58,6 +60,8 @@
 		A114035729728440006AC465 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		A114035B29728604006AC465 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		A114035D297286CF006AC465 /* LanguageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageConstant.swift; sourceTree = "<group>"; };
+		A114035F2972A0EE006AC465 /* LanguageSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingView.swift; sourceTree = "<group>"; };
+		A11403612972A32F006AC465 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		A1176F72296C5FCC00B4D585 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		A1176F74296C610B00B4D585 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		A1176F76296C61DB00B4D585 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			children = (
 				A153F8B4294DD92D00C75433 /* ContentView.swift */,
 				A114035729728440006AC465 /* SettingView.swift */,
+				A114035F2972A0EE006AC465 /* LanguageSettingView.swift */,
 				A1816957295876D1007D56F5 /* RecordsView.swift */,
 				A15A89772955A97500C5D152 /* MainView.swift */,
 				A1E114FA29509554008E9965 /* DeviceBatteryView.swift */,
@@ -213,6 +218,7 @@
 				A18A8B8A2954C85B00CFEBBF /* Extensions.swift */,
 				A153F8DE294DDDE700C75433 /* MESHConstant.swift */,
 				A114035D297286CF006AC465 /* LanguageConstant.swift */,
+				A11403612972A32F006AC465 /* LanguageView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -359,8 +365,10 @@
 				A153F8DF294DDDE700C75433 /* MESHConstant.swift in Sources */,
 				A15A89782955A97500C5D152 /* MainView.swift in Sources */,
 				A114035829728440006AC465 /* SettingView.swift in Sources */,
+				A11403602972A0EE006AC465 /* LanguageSettingView.swift in Sources */,
 				A1176F75296C610B00B4D585 /* RecordService.swift in Sources */,
 				A136BF3C294F2AB100A09E89 /* DeviceConnectButtonView.swift in Sources */,
+				A11403622972A32F006AC465 /* LanguageView.swift in Sources */,
 				A153F8DD294DDC9700C75433 /* Device.swift in Sources */,
 				A153F8B5294DD92D00C75433 /* ContentView.swift in Sources */,
 				A181695629586D6E007D56F5 /* TimerManager.swift in Sources */,
@@ -546,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sample.Thermometer-Hygrometer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -577,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sample.Thermometer-Hygrometer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

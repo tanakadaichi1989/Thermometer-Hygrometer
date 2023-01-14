@@ -11,9 +11,14 @@ struct SettingView: View {
     @EnvironmentObject var manager: SettingManager
     
     var body: some View {
-        VStack {
-            Text("Comming Soon...")
-        }
+            NavigationStack {
+                List {
+                    NavigationLink(destination: LanguageSettingView()){
+                       Text("Language")
+                    }
+                }
+                .navigationTitle(Text("Settings"))
+            }
     }
 }
 

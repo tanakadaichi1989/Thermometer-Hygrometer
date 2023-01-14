@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum LanguageConstant: String {
+enum LanguageConstant: String, CaseIterable, Identifiable {
     case English = "English"
     case Japanese = "Japanese"
+    var id: String { rawValue }
 }
