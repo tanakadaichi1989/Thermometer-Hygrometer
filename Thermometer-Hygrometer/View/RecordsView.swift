@@ -59,7 +59,6 @@ extension RecordsView {
             self.isShowAlert = true
         } label: {
             Image(systemName: "trash")
-            Text("delete all")
         }
         .alert(isPresented: $isShowAlert){
             Alert(
@@ -78,7 +77,6 @@ extension RecordsView {
             shareData()
         } label: {
             Image(systemName: "square.and.arrow.up")
-            Text("export all")
         }
     }
     
