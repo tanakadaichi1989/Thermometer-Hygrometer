@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircleButton: View {
-    var label: String
+    var label: LocalizedStringKey
     
     var body: some View {
         Text(label)

@@ -29,6 +29,7 @@
 		A181695629586D6E007D56F5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181695529586D6E007D56F5 /* TimerManager.swift */; };
 		A1816958295876D1007D56F5 /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1816957295876D1007D56F5 /* RecordsView.swift */; };
 		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
+		A1AFC05D2A80013000722C9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1AFC05F2A80013000722C9B /* Localizable.strings */; };
 		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */; };
 		A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E114FA29509554008E9965 /* DeviceBatteryView.swift */; };
@@ -75,6 +76,8 @@
 		A181695529586D6E007D56F5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		A1816957295876D1007D56F5 /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
 		A18A8B8A2954C85B00CFEBBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A1AFC05E2A80013000722C9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1AFC0602A80014200722C9B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataView.swift; sourceTree = "<group>"; };
 		A1E114FA29509554008E9965 /* DeviceBatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBatteryView.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		A153F8A6294DD92D00C75433 = {
 			isa = PBXGroup;
 			children = (
+				A1AFC05F2A80013000722C9B /* Localizable.strings */,
 				A153F8B1294DD92D00C75433 /* Thermometer-Hygrometer */,
 				A153F8C2294DD92F00C75433 /* Thermometer-HygrometerTests */,
 				A153F8CC294DD92F00C75433 /* Thermometer-HygrometerUITests */,
@@ -301,6 +305,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = A153F8A6294DD92D00C75433;
 			packageReferences = (
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A153F8BA294DD92E00C75433 /* Preview Assets.xcassets in Resources */,
+				A1AFC05D2A80013000722C9B /* Localizable.strings in Resources */,
 				A153F8B7294DD92E00C75433 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +406,18 @@
 			targetProxy = A153F8CA294DD92F00C75433 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1AFC05F2A80013000722C9B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1AFC05E2A80013000722C9B /* en */,
+				A1AFC0602A80014200722C9B /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A153F8D1294DD92F00C75433 /* Debug */ = {

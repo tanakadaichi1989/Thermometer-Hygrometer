@@ -12,7 +12,7 @@ struct DeviceConnectButtonView: View {
     @EnvironmentObject var manager: DeviceManager
     @Environment(\.managedObjectContext) var recordViewContext
     
-    var label: String
+    var label: LocalizedStringKey
     var peripheral: CBPeripheral
     var type: ConnectType
     var completion: () -> Void
