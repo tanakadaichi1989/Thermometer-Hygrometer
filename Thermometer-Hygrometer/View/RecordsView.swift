@@ -33,7 +33,8 @@ struct RecordsView: View {
                 .onAppear {
                     recordManager.records.sort { $0.date > $1.date }
                 }
-                .navigationTitle(                    Text("\(recordManager.records.count.description) \(getLevel(count: recordManager.records.count))")
+                .navigationTitle(
+                    Text("\(recordManager.records.count.description) records")
                 )
                 .toolbar {
                     exportConfirmButton

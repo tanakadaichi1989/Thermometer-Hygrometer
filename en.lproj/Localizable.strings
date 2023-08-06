@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Thermometer-Hygrometer
+
+  Created by 田中大地 on 2023/08/07.
+  
+*/
+
+"This app uses Bluetooth to connect a IoT tag device." = "This app uses Bluetooth to connect a IoT tag device.";
+
+"Let's get started." = "Let's get started.";
+"How to connect MESH sensor" = "How to connect MESH sensor";
+
+"1. Switch on your sensor" = "1. Switch on your sensor";
+"2. Tap your sensor button. " = "2. Tap your sensor button. ";
+"※ If success to connect your device and sensor, this App will change page." = "※ If success to connect your device and sensor, this App will change page.";
+"3. Tap a \"connect\" button on the next page." = "3. Tap a \"connect\" button on the next page.";
+
+"Save measurement data" = "Save measurement data";
+"Connect" = "Connect";
+"Disconnect" = "Disconnect";
+
+"Sensor" = "Sensor";
+"Records" = "Records";
+
+"No measurement data" = "No measurement data";
+"%@ records" = "Data：%@";
+
+"Confirm" = "Confirm";
+"Do you really want to delete all records?" = "Do you really want to delete all records?";
+"Execute delete All" = "Execute delete All";
+"Cancel" = "Cancel";
+
+
