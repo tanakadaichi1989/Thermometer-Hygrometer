@@ -15,8 +15,9 @@ struct DeviceConnectButtonView: View {
     var label: LocalizedStringKey
     var peripheral: CBPeripheral
     var type: ConnectType
+    var disabled: Bool
     var completion: () -> Void
-    
+
     var body: some View {
         Button {
             switch type {
@@ -29,6 +30,7 @@ struct DeviceConnectButtonView: View {
         } label: {
             CircleButton(label: label)
         }
+        .disabled(disabled)
         .padding()
 
     }

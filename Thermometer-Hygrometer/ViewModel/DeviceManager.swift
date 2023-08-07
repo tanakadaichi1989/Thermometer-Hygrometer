@@ -15,6 +15,7 @@ class DeviceManager: NSObject, ObservableObject {
     @Published var devices:[Device] = []
     @Published var recievedData:[Int] = []
     @Published var batteryLevelData:[Int] = []
+    @Published var isConnected = false
     
     override init(){
         centralManager = CBCentralManager(delegate: nil, queue: nil)
@@ -73,10 +74,12 @@ extension DeviceManager: CBCentralManagerDelegate {
         peripheral.delegate = self
         peripheral.discoverServices(services)
         print("centralManager did connect peripheral: \(peripheral.name?.description ?? "unnnamed")")
+        isConnected = true
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("centralManager did disconnect peripheral")
+        isConnected = false
     }
     
     
