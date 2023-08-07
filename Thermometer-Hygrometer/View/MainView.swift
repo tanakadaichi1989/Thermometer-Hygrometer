@@ -37,16 +37,17 @@ struct MainView: View {
                     Text("Save measurement data")
                     Toggle("", isOn: $isSave)
                         .labelsHidden()
+                        .disabled(!manager.isConnected)
                 }
                 .padding()
                 
                 HStack {
-                    DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect){
+                    DeviceConnectButtonView(label: "Connect", peripheral: manager.devices[0].peripheral, type: .connect,disabled: manager.isConnected){
                         timerManager.startTimer(withTimeInterval: 10){
                             if isSave { saveRecord() }
                         }
                     }
-                    DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect){
+                    DeviceConnectButtonView(label: "Disconnect", peripheral: manager.devices[0].peripheral, type: .disConnect,disabled: !manager.isConnected){
                         timerManager.endTimer() {
                             isSave = false
                         }

@@ -31,6 +31,7 @@
 		A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A8B8A2954C85B00CFEBBF /* Extensions.swift */; };
 		A1AFC05D2A80013000722C9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1AFC05F2A80013000722C9B /* Localizable.strings */; };
 		A1AFC0632A814A6F00722C9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1AFC0652A814A6F00722C9B /* InfoPlist.strings */; };
+		A1AFC0682A8153F600722C9B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AFC0672A8153F600722C9B /* SettingView.swift */; };
 		A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95202951E1710023C05F /* UnconnectView.swift */; };
 		A1DF95252951ED2E0023C05F /* MeasurementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */; };
 		A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E114FA29509554008E9965 /* DeviceBatteryView.swift */; };
@@ -81,6 +82,7 @@
 		A1AFC0602A80014200722C9B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1AFC0642A814A6F00722C9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1AFC0662A814A7500722C9B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1AFC0672A8153F600722C9B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		A1DF95202951E1710023C05F /* UnconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconnectView.swift; sourceTree = "<group>"; };
 		A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDataView.swift; sourceTree = "<group>"; };
 		A1E114FA29509554008E9965 /* DeviceBatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBatteryView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				A136BF3B294F2AB100A09E89 /* DeviceConnectButtonView.swift */,
 				A1DF95242951ED2E0023C05F /* MeasurementDataView.swift */,
 				A1DF95202951E1710023C05F /* UnconnectView.swift */,
+				A1AFC0672A8153F600722C9B /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A181695629586D6E007D56F5 /* TimerManager.swift in Sources */,
 				A1176F73296C5FCC00B4D585 /* Record.swift in Sources */,
 				A1E114FB29509554008E9965 /* DeviceBatteryView.swift in Sources */,
+				A1AFC0682A8153F600722C9B /* SettingView.swift in Sources */,
 				A153F8E1294DDE5500C75433 /* DeviceManager.swift in Sources */,
 				A1DF95212951E1710023C05F /* UnconnectView.swift in Sources */,
 				A18A8B8B2954C85B00CFEBBF /* Extensions.swift in Sources */,

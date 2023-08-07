@@ -10,6 +10,7 @@ import CoreData
 import RealmSwift
 
 struct RecordsView: View {
+    @EnvironmentObject var deviceManager: DeviceManager
     @EnvironmentObject var recordManager: RecordManager
     @State private var isShowAlert = false
     
@@ -69,6 +70,7 @@ extension RecordsView {
                 secondaryButton: .default(Text("Cancel"))
             )
         }
+        .disabled(deviceManager.isConnected)
         .padding()
     }
     
@@ -79,6 +81,7 @@ extension RecordsView {
         } label: {
             Image(systemName: "square.and.arrow.up")
         }
+        .disabled(deviceManager.isConnected)
     }
     
     private func deleteAll(){
