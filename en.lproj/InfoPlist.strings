@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Thermometer-Hygrometer
+
+  Created by 田中大地 on 2023/08/08.
+  
+*/
+
+NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect a IoT tag device.";
